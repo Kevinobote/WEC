@@ -1,4 +1,4 @@
-# Project README: Optimizing Wave Energy Output
+# Optimizing Wave Energy Output
 
 ## Objective
 
@@ -6,7 +6,7 @@ To develop a predictive model that estimates the total power output of large-sca
 
 ## Dataset Overview
 
-The dataset comprises configurations of wave energy converters (WECs) and their power outputs under different scenarios. It includes:
+The dataset comprises wave energy converters (WECs) configurations and their power outputs under different scenarios. It includes:
 
 - **WEC Perth 49**
 - **WEC Perth 100**
@@ -43,7 +43,7 @@ The dataset comprises configurations of wave energy converters (WECs) and their 
 
 1. **Correlation Analysis**:
    - Calculate the correlation matrix to identify relationships between features and Total Power.
-   - Focus on features with high correlation to Total Power (e.g., qw).
+   - Focus on highly correlated features to Total Power (e.g., qw).
 
 2. **Significance of Coordinates**:
    - Understand the impact of x and y coordinates on power output.
@@ -70,7 +70,7 @@ The dataset comprises configurations of wave energy converters (WECs) and their 
    - Compare model performance between datasets (e.g., WEC Sydney vs. WEC Perth) to identify patterns or differences.
 
 2. **Classification for Performance Levels**:
-   - Optionally, use classification models to categorize performance levels (e.g., Low, Medium, High) based on predictive accuracy.
+   - Use classification models to categorize performance levels (e.g., Low, Medium, High) based on predictive accuracy.
 
 ### 6. **Optimization Insights**
 
