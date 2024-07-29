@@ -1,95 +1,65 @@
-# Optimizing Wave Energy Output
+# Wave Energy Farm Optimization Project
 
-## Objective
+## Introduction
 
-To develop a predictive model that estimates the total power output of large-scale wave energy farms using machine learning techniques, and to analyze the impact of various features on power output.
+### Background
+Wave energy is a promising renewable energy source that captures the energy from ocean waves to generate electricity. It is an area of increasing interest due to its potential to provide sustainable and reliable energy. However, optimizing energy output from wave farms presents a significant challenge. The complex interactions between multiple wave energy converters (WECs) in a large-scale farm can impact the efficiency and effectiveness of power generation. Accurately predicting the total power output from such configurations requires advanced analytical methods and robust modelling to handle these interactions and enhance overall performance.
 
-## Dataset Overview
+### Research Problem
+The primary research problem of this project is to develop an accurate predictive model for the total power output of large-scale wave energy farms. The datasets involve configurations of wave energy converters (WECs) at different scales and locations, and the goal is to address the computational complexity associated with their interactions. By understanding and predicting the power output accurately, we can optimize the layout and operation of wave farms, leading to more efficient energy generation and better utilization of resources. This requires addressing challenges in data analysis, feature significance, and model performance.
 
-The dataset comprises wave energy converters (WECs) configurations and their power outputs under different scenarios. It includes:
+### Objectives
+1. **Develop a Predictive Model**: Create a machine learning model to accurately estimate the total power output of large-scale wave farms based on various WEC configurations. This model should be able to generalize well across different datasets.
+2. **Analyze Key Features**: Identify and evaluate the most significant features that influence power output, such as spatial coordinates and hydrodynamic factors. The aim is to understand how these features impact total power and provide insights for optimization.
+3. **Optimize Model Performance**: Implement and compare various machine learning techniques to ensure the model’s accuracy and efficiency. The objective is to refine the model based on performance metrics and feature importance to achieve optimal predictions.
 
-- **WEC Perth 49**
-- **WEC Perth 100**
-- **WEC Sydney 49**
-- **WEC Sydney 100**
+### Hypothesis
+1. **WEC Configuration Impact**: The configuration of WECs significantly impacts the total power output of the wave farm. By optimizing the arrangement of WECs, we can improve the overall power generation efficiency.
+2. **Machine Learning Efficiency**: A well-trained machine learning model can accurately predict the power output of wave farms, potentially reducing the reliance on complex hydrodynamic calculations and improving decision-making in wave farm management.
+
+## Methodology, Results, and Discussion
 
 ### Data Description
+The dataset used for this project contains detailed information about wave energy converters and their power outputs under various configurations. It includes:
 
-- **Features**: Coordinates (x, y), Hydrodynamic factors (qw), and Total Power.
-- **Target Variable**: Total Power output of the wave farm.
-- **Variables**: Includes x and y coordinates for WECs, hydrodynamic factors, and power output.
+- **Source of Data**: The data was created by Mehdi Neshat, Bradley Alexander, Nataliia Sergiienko, and Markus Wagner, and it was published in 2023. It is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+- **Period Collected**: Data was provided on September 16, 2023.
+- **How it was Collected**: The data was derived from simulations conducted using the Phoenix HPC service at the University of Adelaide, which accounted for hydrodynamic interactions between WECs.
+- **Under What Conditions it was Collected**: Extensive simulations were performed to model the interactions between WECs under various wave conditions, providing a comprehensive dataset for analysis.
 
-## Steps to Achieve the Objective
+#### Variables Description
 
-### 1. **Data Preparation**
+| Variable Name | Role    | Type    | Description                              | Units | Missing Values |
+| ------------- | ------- | ------- | ---------------------------------------- | ----- | --------------- |
+| X1            | Feature | Integer | X-coordinate of the 1st WEC              | -     | No              |
+| Y1            | Feature | Integer | Y-coordinate of the 1st WEC              | -     | No              |
+| ...           | ...     | ...     | ...                                      | ...   | ...             |
+| Xn            | Feature | Integer | X-coordinate of the nth WEC              | -     | No              |
+| Yn            | Feature | Integer | Y-coordinate of the nth WEC              | -     | No              |
+| Power         | Target  | Real    | Total power output of the wave farm      | kW    | No              |
+| qw            | Feature | Real    | Hydrodynamic interaction factor          | -     | No              |
 
-1. **Data Loading**: Load each dataset into a suitable data structure (e.g., DataFrame) for analysis.
-2. **Handling Missing Values**: 
-   - Identify missing values in the dataset.
-   - Decide on a strategy for imputation. Use the mean for continuous numerical variables and the mode for categorical variables.
-   - Replace missing values with the chosen imputation method.
+### Exploratory Data Analytics
+**Descriptive Analytics**: Descriptive statistics were calculated to summarize the key characteristics of the total power output. This included measures of central tendency (mean, median) and dispersion (range, standard deviation). Visualizations such as histograms and density plots were used to illustrate the distribution of power outputs and other features.
 
-### 2. **Exploratory Data Analysis (EDA)**
+**Diagnostics Analytics**: Diagnostic analytics involved analyzing relationships between features and total power output using scatter plots and correlation matrices. This helped to identify significant predictors and understand their impact on power output. Insights were drawn to refine feature selection and improve model accuracy.
 
-1. **Descriptive Statistics**:
-   - Compute and review key statistics such as mean, median, standard deviation, and range for the target variable (Total Power).
-   - Analyze the distribution and central tendency of the data.
+### Data Cleaning/Pre-Treatment for Machine Learning
+Before applying machine learning models, the data was cleaned and pre-processed. This included:
+- **Handling Missing Values**: Replacing missing values with the mean for continuous variables or mode for categorical variables.
+- **Normalization**: Scaling numerical features to ensure consistent range and improve model performance.
+- **Feature Selection**: Identifying and selecting relevant features based on their significance and impact on the target variable.
 
-2. **Visualization**:
-   - Plot histograms and density plots to visualize the distribution of the Total Power and relevant features.
-   - Use scatter plots to examine relationships between Total Power and other features like coordinates and hydrodynamic factors.
+### Predictive Data Analytics
+**Machine Learning Models**: Various machine learning models were trained and evaluated, including linear regression and ensemble methods. The performance of each model was assessed using metrics such as Mean Squared Error (MSE), Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R-squared (R²).
 
-### 3. **Feature Analysis**
-
-1. **Correlation Analysis**:
-   - Calculate the correlation matrix to identify relationships between features and Total Power.
-   - Focus on highly correlated features to Total Power (e.g., qw).
-
-2. **Significance of Coordinates**:
-   - Understand the impact of x and y coordinates on power output.
-   - Consider spatial relationships and interactions between WECs.
-
-### 4. **Model Training and Evaluation**
-
-1. **Data Splitting**:
-   - Split the dataset into training and testing sets (typically 80% training and 20% testing).
-
-2. **Model Selection**:
-   - Choose appropriate regression models (e.g., Linear Regression, Random Forest).
-
-3. **Training**:
-   - Train the selected model(s) using the training dataset.
-
-4. **Evaluation**:
-   - Evaluate model performance using metrics such as Mean Squared Error (MSE), Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R-squared (R²).
-   - Compare performance across different datasets to assess model accuracy and generalizability.
-
-### 5. **Comparative Analysis**
-
-1. **Performance Comparison**:
-   - Compare model performance between datasets (e.g., WEC Sydney vs. WEC Perth) to identify patterns or differences.
-
-2. **Classification for Performance Levels**:
-   - Use classification models to categorize performance levels (e.g., Low, Medium, High) based on predictive accuracy.
-
-### 6. **Optimization Insights**
-
-1. **Feature Importance**:
-   - Analyze the importance of different features in predicting Total Power.
-   - Use insights to suggest optimizations in WEC configurations.
-
-2. **Model Refinement**:
-   - Refine the model based on performance metrics and feature importance.
-   - Explore ensemble methods or other advanced techniques for improved predictions.
-
-## References
-
-- **Dataset Creators**: Mehdi Neshat, Bradley Alexander, Nataliia Sergiienko, Markus Wagner
-- **Published**: 2023
-- **License**: Creative Commons Attribution 4.0 International (CC BY 4.0)
-- **DOI**: [10.24432/C5GG7Q](https://doi.org/10.24432/C5GG7Q)
-- **Conference**: GECCO Conference
+**Insights and Foresights**: The analysis revealed how well the models predicted power output and identified the most influential features. The findings provided actionable insights for optimizing wave farm configurations and improving power generation efficiency.
 
 ## Conclusion
+The project successfully developed predictive models to estimate the total power output of large-scale wave energy farms. By analyzing the significance of features and evaluating model performance, we provided valuable insights into optimizing wave farm operations. The methodologies employed demonstrated the potential of machine learning to enhance decision-making in wave energy management, offering a practical approach to improving energy generation efficiency.
 
-By following these steps, you can develop a predictive model for wave energy farms, analyze the impact of various features, and optimize the configuration of WECs to enhance power output. This process will provide valuable insights into the performance and efficiency of wave energy systems.
+## References
+- **Neshat, M., Alexander, B., Sergiienko, N., & Wagner, M.** (2023). Data on Wave Energy Converters and Power Output. [DOI: 10.24432/C5GG7Q](https://doi.org/10.24432/C5GG7Q)
+- **Phoenix HPC Service**: University of Adelaide.
+- **Creative Commons Attribution 4.0 International (CC BY 4.0) License**.
+
