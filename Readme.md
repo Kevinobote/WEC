@@ -65,7 +65,7 @@ Before applying machine learning models, the data was cleaned and pre-processed.
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figure Description</title>
+    <title>Power Landscape Analysis</title>
     <style>
         .figure-container {
             text-align: center;
@@ -86,13 +86,9 @@ Before applying machine learning models, the data was cleaned and pre-processed.
     <div class="figure-container">
         <img src="https://d3i71xaburhd42.cloudfront.net/153a3eeff91e73eb45338719579a900972f7a9ca/15-Figure6-1.png" alt="Optimisation of large wave farms">
         <div class="figure-caption">
-            <p>Power landscape analysis of the best 49-buoy layouts.</p>
-            <p>(a) Sydney - wave state grid sampling of the power extracted by the final buoy.</p>
-            <p>(b) Sydney - total energy extracted with grid sampling of the final buoy position.</p>
-            <p>(c) Perth - wave state grid sampling of the last buoy’s power.</p>
-            <p>(d) Perth - grid sampling of total power with respect to the last buoy’s position.</p>
-            <p>No samples are made within the safe distance of already-placed buoys. The power of each buoy is characterized by a specific color in both (a) and (c).</p>
-            <p>All implemented codes and auxiliary materials are publicly available: <a href="https://cs.adelaide.edu.au/~optlog/research/energy.php" target="_blank">https://cs.adelaide.edu.au/~optlog/research/energy.php</a>.</p>
+            ![Wave Energy Converter](https://d3i71xaburhd42.cloudfront.net/153a3eeff91e73eb45338719579a900972f7a9ca/15-Figure6-1.png)
+
+            *Image source: [Power Landscape Research](https://cs.adelaide.edu.au/~optlog/research/energy.php)*
         </div>
     </div>
 </body>
