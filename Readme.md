@@ -60,39 +60,17 @@ Before applying machine learning models, the data was cleaned and pre-processed.
 
 **Insights and Foresights**: The analysis revealed how well the models predicted power output and identified the most influential features. The findings provided actionable insights for optimizing wave farm configurations and improving power generation efficiency.
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Landscape Analysis</title>
-    <style>
-        .figure-container {
-            text-align: center;
-            margin: 20px;
-        }
-        .figure-container img {
-            max-width: 100%;
-            height: auto;
-        }
-        .figure-caption {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <div class="figure-container">
-        <img src="https://d3i71xaburhd42.cloudfront.net/153a3eeff91e73eb45338719579a900972f7a9ca/15-Figure6-1.png" alt="Optimisation of large wave farms">
-        <div class="figure-caption">
-            ![Wave Energy Converter](https://d3i71xaburhd42.cloudfront.net/153a3eeff91e73eb45338719579a900972f7a9ca/15-Figure6-1.png)
+![Wave Energy Converter](https://d3i71xaburhd42.cloudfront.net/153a3eeff91e73eb45338719579a900972f7a9ca/15-Figure6-1.png)
 
-            *Image source: [Power Landscape Research](https://cs.adelaide.edu.au/~optlog/research/energy.php)*
-        </div>
-    </div>
-</body>
-</html>
+*Image source: [Power Landscape Research](https://cs.adelaide.edu.au/~optlog/research/energy.php)*
+
+ *Power landscape analysis of the best 49-buoy layouts*
+- (a) Sydney - wave state grid sampling of the power extracted by the final buoy.
+- (b) Sydney - total energy extracted with grid sampling of the final buoy position.
+- (c) Perth - wave state grid sampling of the last buoy’s power.
+- (d) Perth - grid sampling of total power with respect to the last buoy’s position.
+No samples are made within the safe distance of already-placed buoys. 
+The power of each buoy is characterized by a specific color in both (a) and (c).
 
 
 ## Conclusion
