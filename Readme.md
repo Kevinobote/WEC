@@ -1,5 +1,10 @@
 # Wave Energy Farm Optimization Project
 
+![Wave Energy Converter](https://www.oceanenergy-europe.eu/wp-content/uploads/2021/04/pmo-5-e1619159797882.jpg)
+
+*Image source: [Ocean Energy Europe](https://www.oceanenergy-europe.eu/industry-news/enel-green-power-installs-the-first-full-scale-wave-energy-converter-in-chile/)*
+
+
 ## Introduction
 
 ### Background
