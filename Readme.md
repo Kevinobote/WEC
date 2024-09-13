@@ -60,7 +60,7 @@ Before applying machine learning models, the data was cleaned and pre-processed.
 
 **Insights and Foresights**: The analysis revealed how well the models predicted power output and identified the most influential features. The findings provided actionable insights for optimizing wave farm configurations and improving power generation efficiency.
 
-![Wave Energy Converter](https://d3i71xaburhd42.cloudfront.net/153a3eeff91e73eb45338719579a900972f7a9ca/15-Figure6-1.png)
+![Wave Energy Converter](https://d3i71xaburhd42.cloudfront.net/153a3eeff91e73eb45338719579a900972f7a9ca/15-Figure6-1.jpg)
 
 *Image source: [Power Landscape Research](https://cs.adelaide.edu.au/~optlog/research/energy.php)*
 
