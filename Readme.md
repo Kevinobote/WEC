@@ -60,6 +60,45 @@ Before applying machine learning models, the data was cleaned and pre-processed.
 
 **Insights and Foresights**: The analysis revealed how well the models predicted power output and identified the most influential features. The findings provided actionable insights for optimizing wave farm configurations and improving power generation efficiency.
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure Description</title>
+    <style>
+        .figure-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .figure-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .figure-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="figure-container">
+        <img src="https://d3i71xaburhd42.cloudfront.net/153a3eeff91e73eb45338719579a900972f7a9ca/15-Figure6-1.png" alt="Optimisation of large wave farms">
+        <div class="figure-caption">
+            <p>Power landscape analysis of the best 49-buoy layouts.</p>
+            <p>(a) Sydney - wave state grid sampling of the power extracted by the final buoy.</p>
+            <p>(b) Sydney - total energy extracted with grid sampling of the final buoy position.</p>
+            <p>(c) Perth - wave state grid sampling of the last buoy’s power.</p>
+            <p>(d) Perth - grid sampling of total power with respect to the last buoy’s position.</p>
+            <p>No samples are made within the safe distance of already-placed buoys. The power of each buoy is characterized by a specific color in both (a) and (c).</p>
+            <p>All implemented codes and auxiliary materials are publicly available: <a href="https://cs.adelaide.edu.au/~optlog/research/energy.php" target="_blank">https://cs.adelaide.edu.au/~optlog/research/energy.php</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
 ## Conclusion
 The project successfully developed predictive models to estimate the total power output of large-scale wave energy farms. By analyzing the significance of features and evaluating model performance, we provided valuable insights into optimizing wave farm operations. The methodologies employed demonstrated the potential of machine learning to enhance decision-making in wave energy management, offering a practical approach to improving energy generation efficiency.
 
